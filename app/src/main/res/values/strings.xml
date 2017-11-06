@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Приложение</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">ДАЛЕЕ</string>
+    <string name="skip">ЗАКРЫТЬ</string>
+    <string name="start">ГОТОВО</string>
+
+    <string name="slide_1_title">Oninsulin</string>
+    <string name="slide_1_desc">Площадка для знакомства и общения людей с диабетом, их опекунов и врачей в любой точке мира</string>
+
+    <string name="slide_2_title">Oninsulin</string>
+    <string name="slide_2_desc">Находи людей по категориям рядом с собой, участвуй в событиях и создавай свои</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

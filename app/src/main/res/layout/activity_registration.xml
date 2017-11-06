@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_screen_main2">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="@dimen/desc_padding"
+            android:paddingRight="@dimen/desc_padding"
+            android:text="Регистрация не обязательная, но дает возможность участия в акциях и получать полезные подарки"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="14sp" />
+
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="250dp"
+            android:padding="8dp"
+            android:layout_margin="2dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:background="#fff"
+            android:textColor="#000"
+            android:inputType="phone"
+            android:hint="Phone" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="250dp"
+            android:padding="8dp"
+            android:layout_margin="2dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:background="#fff"
+            android:textColor="#000"
+            android:inputType="textPassword"
+            android:hint="Password" />
+
+        <Button
+            android:id="@+id/button_start_reg"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="Зарегистрироваться" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

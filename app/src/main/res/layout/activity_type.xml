@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_screen_main2">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="@dimen/desc_padding"
+            android:paddingRight="@dimen/desc_padding"
+            android:text="Выбирите категорию, к которой вы себя относите"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button_type_1"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="СД 1 тип" />
+
+        <Button
+            android:id="@+id/button_type_2"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="СД 2 тип" />
+
+        <Button
+            android:id="@+id/button_type_3"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="Врач" />
+
+        <Button
+            android:id="@+id/button_type_4"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="Опекун" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>
