@@ -8,6 +8,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.content.pm.PackageManager;
@@ -93,6 +94,30 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+    Marker now;
+
+    public void onLocationChanged(Location location) {
+
+        if(now != null){
+            now.remove();
+        }
+
+        // Getting latitude of the current location
+        double latitude = location.getLatitude();
+
+        // Getting longitude of the current location
+        double longitude = location.getLongitude();
+
+        // Creating a LatLng object for the current location
+        LatLng latLng = new LatLng(latitude, longitude);
+
+        // Zoom in the Google Map
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 15));
+
+        now = mMap.addMarker(new MarkerOptions().position(latLng));
+
+    }
+
     private void checkLocationAddToMap() {
         //Checking if the user has granted the permission
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -104,13 +129,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         //Fetching the last known location using the Fus
         Location location = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
 
-        //MarkerOptions are used to create a new Marker.You can specify location, title etc with MarkerOptions
-        MarkerOptions markerOptions = new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).title("You are Here");
+        if (location != null) {
+            onLocationChanged(location);
+        }
+        else {
+            //MarkerOptions are used to create a new Marker.You can specify location, title etc with MarkerOptions
+            MarkerOptions markerOptions = new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).title("You are Here");
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 15));
 
-        //Adding the created the marker on the map
-        mMap.addMarker(markerOptions);
+            //Adding the created the marker on the map
+            mMap.addMarker(markerOptions);
+        }
 
     }
 
