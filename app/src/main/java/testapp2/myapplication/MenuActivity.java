@@ -52,9 +52,9 @@ public class MenuActivity extends AppCompatActivity{
         overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
     }
 
-    public void gotoBase(View v){
-        Intent BaseActivity = new Intent (this, BaseActivity.class);
-        startActivity(BaseActivity);
+    public void gotoDrawer(View v){
+        Intent DrawerActivity = new Intent (this, DrawerActivity.class);
+        startActivity(DrawerActivity);
         overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
     }
 

@@ -65,7 +65,7 @@
                 android:layout_height="60dp"
                 android:background="@drawable/base"
                 android:gravity="bottom"
-                android:onClick="gotoBase"
+                android:onClick="gotoDrawer"
                 android:text="База знаний"
                 android:textAlignment="center"
                 android:textSize="11sp"
