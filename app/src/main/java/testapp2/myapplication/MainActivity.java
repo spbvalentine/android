@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoMenu(View v){
-        Intent MenuActivity = new Intent (this, MenuActivity.class);
-        startActivity(MenuActivity);
+        Intent DrawerActivity = new Intent (this, DrawerActivity.class);
+        startActivity(DrawerActivity);
         overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
     }
 

@@ -26,7 +26,7 @@ public class PeopleActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),MenuActivity.class));
+                startActivity(new Intent(getApplicationContext(),DrawerActivity.class));
                 overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
             }
         });
